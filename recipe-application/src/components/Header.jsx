@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router";
+
 function Header () {
+    const navigate = useNavigate();
+
     return (
         <div className="flex items-center justify-between px-8 py-8 lg:px-32">
             <div className="flex items-center">
@@ -8,7 +12,7 @@ function Header () {
                 </h1>
             </div>
             
-            <button className="text-lg lg:sm cursor-pointer hover:bg-black hover:text-white transition-all duration-300 ease-in-out font-semibold px-4 py-1 rounded-md">
+            <button onClick={() => navigate('/')} className="text-lg lg:sm cursor-pointer hover:bg-black hover:text-white transition-all duration-300 ease-in-out font-semibold px-4 py-1 rounded-md">
                 Home
             </button>
         </div>
