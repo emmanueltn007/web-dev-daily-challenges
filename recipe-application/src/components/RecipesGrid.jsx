@@ -13,7 +13,7 @@ function RecipesGrid ({ recipesData }) {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
                 {recipesData.map((recipe) => {
                     return (
-                        <div key={recipe.id} className="text-lg lg:text-sm rounded-md shadow-md shadow-gray-500">
+                        <div key={recipe.id} className="text-lg lg:text-sm rounded-md overflow-hidden shadow-md shadow-gray-500">
                             <img loading="lazy" src={recipe.image} alt={`${recipe.name}'s image`} />
                             <div className="p-4">
                                 <span>

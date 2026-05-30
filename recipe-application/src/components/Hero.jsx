@@ -1,6 +1,6 @@
 function Hero () {
     return (
-        <section className="text-center bg-gray-300 p-16 flex flex-col gap-4">
+        <section className="text-center bg-gray-300 px-8 py-8 lg:px-32 flex flex-col gap-4">
             <img loading="lazy" src="https://cdn.dummyjson.com/recipe-images/5.webp" alt="" />
             <h1 className="text-3xl font-light">
                 Master The Kitchen With Ease: Unleash Your Inner Chef Today!
