@@ -8,7 +8,7 @@ function Header () {
                 </h1>
             </div>
             
-            <button className="text-lg lg:sm cursor-pointer">
+            <button className="text-lg lg:sm cursor-pointer hover:bg-black hover:text-white transition-all duration-300 ease-in-out font-semibold px-4 py-1 rounded-md">
                 Home
             </button>
         </div>

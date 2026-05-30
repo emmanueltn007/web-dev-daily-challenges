@@ -8,7 +8,7 @@ function Hero () {
             <p className="text-lg lg:sm">
                 Discover recipes helping you find the easiest way to cook.
             </p>
-            <button className="bg-orange-400 px-4 py-2 text-white rounded-md cursor-pointer self-center">
+            <button className="bg-orange-400 px-4 py-2 text-white font-semibold rounded-md cursor-pointer self-center border-2 border-transparent hover:border-orange-400 hover:bg-transparent hover:text-orange-400 transition-all duration-300 ease-in-out">
                 Browse Recipes
             </button>
         </section>
