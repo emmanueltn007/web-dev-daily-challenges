@@ -1,0 +1,52 @@
+function RecipesGrid ({ recipesData }) {
+    return (
+        <section className="flex flex-col gap-4 px-8 py-8 lg:px-32">
+            <div className="flex flex-col gap-2">
+                <h3 className="text-4xl md:text-3xl font-light">
+                    Discover, Create, Share
+                </h3>
+                <p className="text-lg lg:text-sm">
+                    Check out our most popular recipes!
+                </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+                {recipesData.map((recipe) => {
+                    return (
+                        <div key={recipe.id} className="text-lg lg:text-sm rounded-md shadow-md shadow-gray-500">
+                            <img loading="lazy" src={recipe.image} alt={`${recipe.name}'s image`} />
+                            <div className="p-4">
+                                <span>
+                                    {recipe.name}
+                                </span>
+                                <div className="flex gap-2">
+                                    <div className="flex items-center gap-1">
+                                        <img src="./images/clock-icon.svg" alt="clock icon" />
+                                        <span>{recipe.cookTimeMinutes}</span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <svg className="text-orange-400 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M256.5 37.6C265.8 29.8 279.6 30.2 288.4 38.5C300.6 50.1 311.7 62.9 322.3 75.9C335.8 92.4 352 114.2 367.6 140.1C372.8 133.3 377.6 127.3 381.8 122.2C382.9 120.9 384 119.5 385.2 118.1C393 108.3 402.9 96 416 96C429.4 96 438.8 107.9 446.8 118.1C448.1 119.8 449.4 121.4 450.7 122.9C461 135.3 474.7 153.2 488.4 175.3C515.6 219.2 544 281.7 544 351.9C544 475.6 443.7 575.9 320 575.9C196.3 575.9 96 475.7 96 352C96 260.9 137.1 182 176.5 127C196.4 99.3 216.2 77.1 231.1 61.9C239.3 53.5 247.6 45.2 256.6 37.7zM385.8 198.3C381.2 205.6 373 209.9 364.4 209.5C355.8 209.1 348 204.1 344.1 196.3C325.1 158.7 302.8 127.8 285.2 106.2C280 99.8 275.2 94.2 271 89.6C269.2 91.3 267.4 93.2 265.4 95.2C251.8 109.2 233.6 129.5 215.5 154.8C178.9 205.8 144 274.9 144 351.8C144 449 222.8 527.8 320 527.8C417.2 527.8 496 449 496 351.8C496 294.1 472.4 240.5 447.6 200.4C436.3 182.1 424.9 167 416 156C407.5 166.5 396.7 180.8 385.8 198.1zM321.7 480C258.5 480 208 439.4 208 370.8C208 323.3 241.2 284.3 259.5 266.5C265.8 260.4 275.6 261.5 281 268.4C297.2 288.9 329 329.3 346.3 351.4C352.5 359.3 364.4 359.6 371 351.9L396.2 322.6C402.7 315 414.2 315.7 418.7 324.6C444 370.8 432.7 429.6 390.6 459C369.5 473 347.1 480 321.8 480z" fill="currentColor" /></svg>
+                                        <span>
+                                            {recipe.caloriesPerServing}
+                                        </span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <img src="./images/star-icon.svg" alt="star icon" />
+                                        <span>
+                                            {recipe.rating}({recipe.reviewCount})
+                                        </span>
+                                    </div>
+                                </div>
+                                <button className="bg-orange-400 text-white font-semibold rounded-md px-4 py-1 mt-4 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-orange-400 hover:border-orange-400 transition-all duration-300 ease-in-out">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </section>
+    );
+}
+
+export default RecipesGrid
