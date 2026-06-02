@@ -4,7 +4,7 @@ function Header () {
     const navigate = useNavigate();
 
     return (
-        <div className="flex items-center justify-between px-8 py-8 lg:px-32">
+        <div className="flex items-center justify-between px-8 py-8 lg:px-32 border-b border-b-gray-300">
             <div className="flex items-center">
                 <img src="./images/mountain.png" alt="logo icon" />
                 <h1 className="hidden md:block text-3xl">
